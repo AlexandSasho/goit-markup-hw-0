@@ -9,9 +9,14 @@
 }
 
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
-  background-color: var(--team-background-color);
+ background-color: var(--team-background-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+ 
+  @media screen and (min-width: 1200px) {
+     padding-top: 94px;
+     padding-bottom: 94px;
+     }
 }
 
 .team-item {
@@ -19,7 +24,22 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  margin-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    width: 354px;
+    }
+    @media screen and (min-width: 1200px) {
+    width: 270px;
+       } 
+
 }
+
+.team-item:nth-child(2n) {
+  @media screen and (min-width: 768px) {
+   margin-left: 30px;
+    }
+}
+
 
 .team-item-name {
   font-weight: 500;
@@ -27,6 +47,8 @@
   line-height: calc(19 / 16);
   letter-spacing: 0.03em;
   color: var(--text-color);
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .div-name-position {
@@ -78,15 +100,17 @@
 }
 
 .team-list {
-  display: flex;
-  flex-wrap: nowrap;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100% / 2 -30px);
+     }
 }
 
 .team-item + .team-item {
-  margin-left: 30px;
-}
+  @media screen and (min-width: 1200px) {
+    margin-left: 30px;
+     }
+ }
 
-.team-item-name {
-  margin-bottom: 10px;
-  text-align: center;
-}
+

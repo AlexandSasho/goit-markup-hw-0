@@ -29,7 +29,12 @@
 }
 
 .adress-list-div {
-  margin-right: 70px;
+  margin-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+    margin-bottom: 0;
+     }
+
 }
 
 .adress-city {
@@ -69,11 +74,19 @@
 }
 
 .footer-container {
-  display: flex;
-  align-items: baseline;
+  display: block;
+  text-align: center;
+  
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    
+     }
 }
+
 .icon-footer {
   display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .icon-footer-link {
@@ -107,17 +120,28 @@
   font-weight: 700;
   font-size: 14px;
   line-height: calc(16 / 14);
+  
+  
 }
 
 .contact-wrap {
-  margin-left: 93px;
+  
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+     }
+  
+
 }
 
 .contact-subscription-telegram {
-  display: flex;
+  display: block;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+     }
 }
 
 .input-email {
@@ -131,7 +155,8 @@
   color: var(--header-link-color);
   &:focus {
     outline: none;
-  }
+      }
+  margin-bottom: 20px;
 }
 
 .btn-telegram {
@@ -163,4 +188,11 @@
   text-align: center;
   justify-content: center;
   align-items: center;
+}
+
+.tablet-footer {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+    }
 }

@@ -1,6 +1,5 @@
 .header-portfolio-container {
   display: flex;
-  text-align: center;
 }
 
 .portfolio-nav {
@@ -30,8 +29,11 @@
 }
 
 .header-list-portfolio {
-  display: flex;
   margin-left: 93px;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    }
 }
 
 .item-portfolio + .item-portfolio {
@@ -39,15 +41,32 @@
 }
 
 .portfolio-contact {
-  display: flex;
-  margin-left: auto;
+ margin-left: auto;
+  display: none;
+  padding-top: 21px;
+  padding-bottom: 21px;
+
+  @media screen and (min-width: 768px) {
+     display: block;
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+       } 
 }
 
 .portfolio-header-adress + .portfolio-header-adress {
-  margin-left: 50px;
+  @media screen and (min-width: 768px) {
+   margin: 10px 0px 0px 0px;
+    }
+    
+    @media screen and (min-width: 1200px) {
+      margin: 0px 0px 0px 50px;
+       }
 }
 
 .portfolio-header-adress {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+     }
 }
