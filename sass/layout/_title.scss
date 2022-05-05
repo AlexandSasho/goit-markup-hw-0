@@ -44,15 +44,20 @@
 }
 
 .title-h1 {
+ 
   font-weight: 900;
-  
-  font-size: 26px;
+  font-size: 18px;
   line-height: calc(42 / 26);
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 30px;
   color: var(--header-text-color);
+  @media screen and (min-width: 480px) {
+    font-size: 26px;
+   line-height: calc(42 / 26);
+    }
+
   @media screen and (min-width: 1200px) {
     font-size: 44px;
     line-height: calc(60 / 44);

@@ -1,5 +1,7 @@
 .header-portfolio-container {
   display: flex;
+  border-bottom: 1px solid #ECECEC;
+  
 }
 
 .portfolio-nav {
@@ -43,14 +45,15 @@
 .portfolio-contact {
  margin-left: auto;
   display: none;
-  padding-top: 21px;
-  padding-bottom: 21px;
+  
 
   @media screen and (min-width: 768px) {
      display: block;
+    
     }
     @media screen and (min-width: 1200px) {
       display: flex;
+      padding: 0;
        } 
 }
 

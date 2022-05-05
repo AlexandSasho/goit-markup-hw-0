@@ -30,14 +30,26 @@
     }
     @media screen and (min-width: 1200px) {
     width: 270px;
-       } 
-
-}
+       }
+   
+  }
+   
 
 .team-item:nth-child(2n) {
   @media screen and (min-width: 768px) {
    margin-left: 30px;
     }
+}
+
+.team-item:last-child {
+  margin-bottom: 0;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+    }
+  @media screen and (min-width: 1200px) {
+  margin-bottom: 30px;
+   }
+
 }
 
 
@@ -104,8 +116,12 @@
     display: flex;
     flex-wrap: wrap;
     width: calc(100% / 2 -30px);
-     }
-}
+    margin-bottom: -30px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-bottom: -30px;
+       }  
+  }
 
 .team-item + .team-item {
   @media screen and (min-width: 1200px) {

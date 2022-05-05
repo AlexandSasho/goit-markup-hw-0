@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -9,11 +9,6 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
       integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
-   <style>
-      li {
-         list-style-type: none;
-      }
-   </style>
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,8 +17,10 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet">
    
+ 
    <link rel="stylesheet" href="./css/main.css">
-   <!-- <link rel="stylesheet" href="./css/main.min.css"> -->
+
+  
    
 
 </head>
@@ -47,10 +44,10 @@
          </nav>
       
       <ul class="adress-list">
-         <li class="item-adress"><a href="mailto:info@devstudio.com" class="header-link-adress">
+         <li class="item-adress item-adress-mail"><a href="mailto:info@devstudio.com" class="header-link-adress">
             <svg class="header-contacts-icon" width="16" height="12">
                <use href="./images/icons.svg#icon-envelope-hover"></use></svg>info@devstudio.com</a></li>
-         <li class="item-adress"><a href="tel:+380961111111" class="header-link-adress">
+         <li class="item-adress item-adress-tel"><a href="tel:+380961111111" class="header-link-adress">
             <svg class="header-contacts-icon" width="10" height="16">
                <use href="./images/icons.svg#icon-smartphone"></use></svg> +38 096 111 11 11</a></li>
       </ul>
@@ -77,24 +74,23 @@
       <li class="mob-header-item"><a href="" class="mob-header-link">Контакты</a></li>
    </ul>
      </div>
-
+    <div class="mob-menu-footer">
      <div class="mob-menu-bottom">
    <ul class="mob-adress-list">
       <li class="mob-item-adress"><a href="tel:+380961111111" class="mob-link-adress-tel">
           +38 096 111 11 11</a></li>
       <li class="mob-item-adress"><a href="mailto:info@devstudio.com" class="mob-link-adress">
          info@devstudio.com</a></li>
-      
-   </ul>
+      </ul>
      </div>
-   <ul class="masters-social-list-mob">
+   
+     <ul class="masters-social-list-mob">
       <li class="mob-menu-social-item"><a href="" class="mob-menu-social-link">Instagram</a></li>
       <li class="mob-menu-social-item"><a href="" class="mob-menu-social-link">Twitter</a></li>
       <li class="mob-menu-social-item"><a href="" class="mob-menu-social-link">Facebook</a></li>
       <li class="mob-menu-social-item"><a href="" class="mob-menu-social-link">Linkedin</a></li>
      </ul>
-
-
+   </div>
 </div>
 </div>
    </header>
@@ -163,20 +159,20 @@
          <li class="work-item">
             <div class="work-wrap">
             <img src="./images/img1.jpg" alt="Набирание текста" width="370" height="294"/>
-            <p class="work-top-text">ДЕКСТОПНЫЕ ПРИЛОЖЕНИЯ</p>
+            <p class="work-top-text">Декстопные приложения</p>
          </div>
          </li>
 
          <li class="work-item">
             <div class="work-wrap">
             <img src="./images/img2.jpg" alt="Смартфон и ноутбук" width="370" height="294"/>
-            <p class="work-top-text">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</p></div>
+            <p class="work-top-text">Мобильные приложения</p></div>
          </li>
 
          <li class="work-item">
             <div class="work-wrap">
             <img src="./images/img3.jpg" alt="Работа с планшетом" width="370" height="294"/>
-            <p class="work-top-text">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</p></div>
+            <p class="work-top-text">Дизайнерские решения</p></div>
          </li>
       </ul>
       </div>
@@ -387,8 +383,8 @@
          </address>
          </div>
         
-        <div>
-           <p class="footer-socials-p">ПРИСОЕДИНЯЙТЕСЬ</p>
+        <div class="footer-socials-contact">
+           <p class="footer-socials-p">Присоединяйтесь</p>
            <ul class="icon-footer">
             <li class="icon-footer-item">
                <a href="" class="icon-footer-link">
@@ -425,7 +421,7 @@
         
 
          <div class="contact-wrap">
-            <p class="footer-subscription">ПОДПИШИТЕСЬ НА РАССЫЛКУ</p>
+            <p class="footer-subscription">Подпишитесь на рассылку</p>
            <div class="contact-subscription-telegram">
             <form>
                <input type="email"
@@ -531,39 +527,11 @@
    </div>
 </div>
 <!-- modal-js -->
-<script>
-   (() => {
-      const refs = {
-         openModalBtn: document.querySelector("[data-modal-open]"),
-         closeModalBtn: document.querySelector("[data-modal-close]"),
-         modal: document.querySelector("[data-modal]"),
-      };
-
-      refs.openModalBtn.addEventListener("click", toggleModal);
-      refs.closeModalBtn.addEventListener("click", toggleModal);
-
-      function toggleModal() {
-         refs.modal.classList.toggle("is-hidden");
-      }
-   })();
-</script>
+<script src="/js/modal.js"></script>
 <!-- menujs -->
-<script>
-   (() => {
-    const refs = {
-      openMenuBtn: document.querySelector(".menu-open-btn"),
-      closeMenuBtn: document.querySelector(".menu-close-btn"),
-      menu: document.querySelector(".mob-menu"),
-    };
-  
-    refs.openMenuBtn.addEventListener("click", toggleMenu);
-    refs.closeMenuBtn.addEventListener("click", toggleMenu);
-  
-    function toggleMenu() {
-      refs.menu.classList.toggle("is-hidden");
-    }
-  })();
-</script>
+<script src="/js/menu.js"></script>
+
+
 </body>
 
 </html>

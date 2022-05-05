@@ -8,7 +8,7 @@
 }
 
 .about-div-icon {
-  width: 270px;
+  width: auto;
   height: 120px;
   background-color: var(--team-background-color);
   margin-bottom: 30px;
@@ -33,11 +33,7 @@
       @media screen and (min-width: 1200px) {
         width: 270px;
          }
-  
-
-    
-
-}
+  }
 
 .about-h3 {
   font-weight: bold;
@@ -46,7 +42,7 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--text-color);
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .about-list {
@@ -71,7 +67,7 @@
 
 
 .about-list .about-item {
-  width: 270px;
+  width: auto;
   @media screen and (min-width: 480px) {
     width: 450px;
      }
@@ -86,6 +82,8 @@
 
 .about-item {
   margin-bottom: 30px;
+  
+  
   @media screen and (min-width: 480px) {
     margin-bottom: 30px;
     }
@@ -102,10 +100,8 @@
   .about-item:first-child {
     @media screen and (min-width: 1200px) {
       margin-left: 0;
-      
-       }
-
-  }
+      }
+    }
 
 .about-p {
   font-weight: normal;

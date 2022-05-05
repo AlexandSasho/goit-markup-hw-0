@@ -9,8 +9,6 @@
 }
 
 .button-filter {
-  
-  // margin-bottom: 50px;
   flex-wrap: wrap;
   display: flex;
   margin-bottom: 40px;
@@ -40,6 +38,16 @@
 .btn-item {
   margin-right: 8px;
   margin-bottom: 15px;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 8px;
+    margin-bottom: 15px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-right: 0;
+      margin-bottom: 0;
+       }
+  
 }
 
 .btn-item + .btn-item {
@@ -65,6 +73,7 @@
 
 
 .services-list-link {
+  height: 100%;
   display: block;
   transition-property: box-shadow;
   transition-duration: 250ms;
@@ -78,6 +87,7 @@
   &:focus .services-top-text {
     transform: translateY(0);
   }
+ 
 }
 
 
@@ -96,26 +106,30 @@
   padding-left: 24px;
   padding-right: 24px;
   height: 100%;
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
 }
 
 
 .services {
-  // display: flex;
-  // flex-wrap: wrap;
+  
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: -30px;
     margin-left: -30px;
-   
+   }
+
+   @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
      }
  }
 
 
 .services-item {
   position: relative;
+ 
 }
 
 .services-wrap {
@@ -124,7 +138,6 @@
 }
 
 .services .services-item {
-  // width: 370px;
   @media screen and (min-width: 768px) {
     width: calc(100% / 2 - 30px);
     margin-left: 30px;
@@ -157,22 +170,24 @@
 
 .service-list-choice {
   font-size: 18px;
-  line-height: 2;
+  line-height: 36px;
   vertical-align: top;
   color: var(--text-color);
-
   margin-bottom: 4px;
+  letter-spacing: 0.06em;
 }
 
 .div-services-choise {
   background: var(--header-text-color);
-  border: 1px solid #eeeeee;
   border-top: none;
   box-sizing: border-box;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;
   padding-right: 24px;
+  border: 1px solid #eeeeee;
+  flex-grow: 1;
+  
 }
 
 .sepvice-p {
@@ -181,3 +196,10 @@
   vertical-align: top;
   color: var(--header-link-color);
 }
+
+.div-services-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
